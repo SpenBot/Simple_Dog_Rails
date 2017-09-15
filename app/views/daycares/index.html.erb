@@ -1,0 +1,6 @@
+<h1> ALL DAYCARES </h1>
+
+<% @daycares.each do |daycare| %>
+  </br>
+  <p> <%= link_to "#{daycare.name}", daycare %> </p>
+<% end %>
