@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>SimpleDogRails</title>
+
+    <title>SimpleDog</title>
     <%= csrf_meta_tags %>
 
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
+
+
+
   <body>
-    <%= yield %>
+
+
+    <header>
+
+      <h1>SIMPLE DOG</h1>
+      <p>Dog Daycare Reservations App</p>
+
+      <nav>
+        <a href="/dogs">DOGS</a>
+        <a href="/daycares">DAYCARES</a>
+      </nav>
+
+    </header>
+
+
+
+    <main>
+      <%= yield %>
+    </main>
+
+
+
+    <footer>
+      <p>Simple Dog Web App</p>
+      <p> Copyright: 2017 </p>
+    </footer>
+
+
   </body>
+
+
+
 </html>

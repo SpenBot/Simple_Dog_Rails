@@ -1,0 +1,24 @@
+<h2>ADD NEW DAYCARE PROFILE</h2>
+
+
+
+<p> Enter in your new daycare information. </p>
+
+<%= form_for @daycare do |f| %>
+
+  </br>
+  <%= f.label :"DAYCARE NAME" %>
+  <%= f.text_field :name %>
+  </br>
+  </br>
+  <%= f.label :"ADDRESS" %>
+  <%= f.text_field :address %>
+  </br>
+  </br>
+  <%= f.label :"DAYCARE RATE" %>
+  <%= f.text_field :price %>
+  </br>
+  </br>
+  <%= f.submit %>
+
+<% end %>

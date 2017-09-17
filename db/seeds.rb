@@ -3,6 +3,7 @@
 
 Dog.destroy_all
 Daycare.destroy_all
+Appointment.destroy_all
 
 ################# DOG SEEDS #################################
 
@@ -66,4 +67,37 @@ daycare_4 = Daycare.create({
   name: "Funtime Daycare",
   address: "57 State Street",
   price: 25
+  })
+
+
+
+################# APPOINTMENT SEEDS ##########################
+
+appt_1 = Appointment.create({
+  dog_id: 1,
+  daycare_id: 3,
+  day: 15,
+  month: 9,
+  year: 2017,
+  hour: 7
+  })
+
+
+appt_2 = Appointment.create({
+  dog_id: 1,
+  daycare_id: 3,
+  day: 18,
+  month: 9,
+  year: 2017,
+  hour: 13
+  })
+
+
+appt_2 = Appointment.create({
+  dog_id: 1,
+  daycare_id: 4,
+  day: 21,
+  month: 9,
+  year: 2017,
+  hour: 7
   })

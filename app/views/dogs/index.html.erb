@@ -1,6 +1,9 @@
-<h1> ALL DOGS </h1>
+<h2> ALL DOGS </h2>
 
 <% @dogs.each do |dog| %>
-  </br>
   <p> <%= link_to "#{dog.name}", dog %> </p>
 <% end %>
+
+<div id="new_dog_link">
+  <%= link_to "ADD A NEW DOG", new_dog_path %>
+</div>

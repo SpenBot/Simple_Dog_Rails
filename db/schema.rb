@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(version: 20170915170342) do
   create_table "appointments", force: :cascade do |t|
     t.bigint "dog_id"
     t.bigint "daycare_id"
+    t.integer "day"
+    t.integer "month"
+    t.integer "year"
+    t.integer "hour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["daycare_id"], name: "index_appointments_on_daycare_id"

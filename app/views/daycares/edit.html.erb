@@ -1,0 +1,26 @@
+<h2>EDIT OR DELETE DAYCARE PROFILE</h2>
+
+<p> Edit in your daycare information. </p>
+
+<%= form_for @daycare do |f| %>
+
+  </br>
+  <%= f.label :"DAYCARE NAME" %>
+  <%= f.text_field :name %>
+  </br>
+  </br>
+  <%= f.label :"ADDRESS" %>
+  <%= f.text_field :address %>
+  </br>
+  </br>
+  <%= f.label :"DAYCARE RATE" %>
+  <%= f.text_field :price %>
+  </br>
+  </br>
+  <%= f.submit %>
+
+<% end %>
+
+<div id="delete_daycare_link">
+  <%= link_to "DELETE DAYCARE", daycare_path(@daycare), method: :delete %>
+</div>

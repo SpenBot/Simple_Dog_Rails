@@ -1,3 +1,191 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: rgb(122, 213, 255);
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: -20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: 250px;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(255, 201, 46);
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+  padding: 25px;
+  color: white;
+  font-size: 30px;
+  text-decoration: underline;
+  background-color: rgb(201, 188, 147);
+}
+
+footer {
+  /*background-color: rgb(176, 164, 128);*/
+  background-color: rgb(201, 188, 147);
+  color: white;
+  padding: 5px;
+  margin-top: 60px;
+}
+
+.dog_appointment {
+  background-color: rgb(122, 213, 255);
+  /*border: 5px solid rgb(255, 201, 46);*/
+  margin-top: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+}
+
+.daycare_appointment {
+  background-color: rgb(122, 213, 255);
+  /*border: 5px solid rgb(255, 201, 46);*/
+  margin-top: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+}
+
+h4 {
+  font-size: 26px;
+  background-color: rgb(255, 201, 46);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 80px;
+}
+
+#new_dog_link {
+  background-color: rgb(255, 201, 46);
+  width: 200px;
+  padding: 10px;
+  margin: 25px 0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#new_dog_link  a {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+}
+
+#edit_dog_link {
+  background-color: rgb(122, 213, 255);
+  width: 350px;
+  padding: 10px;
+  margin: 25px 0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#edit_dog_link  a {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+}
+
+#dog_new_appointment_link {
+  background-color: rgb(247, 117, 107);
+  width: 400px;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#dog_new_appointment_link a {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+}
+
+#delete_dog_link {
+  background-color: rgb(247, 117, 107);
+  width: 200px;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#delete_dog_link a {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+#new_daycare_link {
+  background-color: rgb(255, 201, 46);
+  width: 250px;
+  padding: 10px;
+  margin: 25px 0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#new_daycare_link a {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+}
+
+#edit_daycare_link {
+  background-color: rgb(122, 213, 255);
+  width: 350px;
+  padding: 10px;
+  margin: 25px 0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#edit_daycare_link  a {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+}
+
+#delete_daycare_link {
+  background-color: rgb(247, 117, 107);
+  width: 250px;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#delete_daycare_link a {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
