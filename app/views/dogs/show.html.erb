@@ -31,7 +31,7 @@
 <h4> APPOINTMENTS : </h4>
 
 <div id="dog_new_appointment_link">
-  <%= link_to "[ MAKE A NEW APPOINTMENT ] ", new_appointment_path %>
+  <%= link_to "[ MAKE A NEW APPOINTMENT ] ", new_dog_appointment_path(@dog) %>
 </div>
 
   <% @dog.appointments.each do |appointment| %>
@@ -41,5 +41,10 @@
     <p> MONTH: <%= appointment.month %></p>
     <p> YEAR: <%= appointment.year %></p>
     <p> HOUR: <%= appointment.hour %></p>
+
+    <div id="edit_dog_appointment_link">
+      <%= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_dog_appointment_path(@dog, appointment) %>
+    </div>
+
     </div>
   <% end %>

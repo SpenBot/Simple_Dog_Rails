@@ -186,6 +186,43 @@ h4 {
   color: white;
 }
 
+
+
+
+
+
+#edit_dog_appointment_link {
+  background-color: rgb(255, 201, 46);
+  width: 350px;
+  padding: 10px;
+  margin: 25px 0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#edit_dog_appointment_link a {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+}
+
+#delete_dog_appointment_link {
+  background-color: rgb(247, 117, 107);
+  width: 250px;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#delete_dog_appointment_link a {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

@@ -2,8 +2,10 @@ Rails.application.routes.draw do
 
   root to: 'dogs#index'
 
-  resources :dogs
-  resources :appointments
+  resources :dogs do
+    resources :appointments
+  end
+  
   resources :daycares
 
 

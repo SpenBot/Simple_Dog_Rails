@@ -1,0 +1,35 @@
+<h2>EDIT OR DELETE APPOINTMENT</h2>
+
+<p> Edit your dogs appointment information. </p>
+
+<%= form_for [@dog, @appointment] do |f| %>
+
+  <h3> DOG: </h3>
+    <p> <%= @dog.name %> </p>
+  <h3> DAYCARE: </h3>
+    <p> <%= @appointment.daycare.name %> </p>
+  </br>
+  </br>
+  <%= f.label :"Day" %>
+  <%= f.text_field :day %>
+  </br>
+  </br>
+  <%= f.label :"Month" %>
+  <%= f.text_field :month %>
+  </br>
+  </br>
+  <%= f.label :"Year" %>
+  <%= f.text_field :year %>
+  </br>
+  </br>
+  <%= f.label :"Hour" %>
+  <%= f.text_field :hour %>
+  </br>
+  </br>
+  <%= f.submit %>
+
+<% end %>
+
+<div id="delete_dog_appointment_link">
+  <%= link_to "DELETE APPOINTMENT", dog_appointment_path(@dog, @appointment), method: :delete %>
+</div>

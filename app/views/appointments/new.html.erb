@@ -1,0 +1,44 @@
+<h2>ADD NEW APPOINTMENT</h2>
+
+<p> Make a new appointment with a daycare. </p>
+
+<%= form_for [@dog, @appointment] do |f| %>
+
+  <h3> DOG: </h3>
+    <p> <%= @dog.name %> </p>
+
+  <%= f.label :"Daycare ID #" %>
+  <%= f.number_field :daycare_id %>
+  </br>
+  </br>
+  <%= f.label :"Day" %>
+  <%= f.text_field :day %>
+  </br>
+  </br>
+  <%= f.label :"Month" %>
+  <%= f.text_field :month %>
+  </br>
+  </br>
+  <%= f.label :"Year" %>
+  <%= f.text_field :year %>
+  </br>
+  </br>
+  <%= f.label :"Hour" %>
+  <%= f.text_field :hour %>
+  </br>
+  </br>
+  <%= f.submit %>
+
+<% end %>
+
+
+
+
+
+
+<%#= select_tag(:daycare_id, options_for_select([
+  ['daycare 1', 1],
+  ['daycare 2', 2],
+  ['daycare 3', 3]
+])
+) %>
