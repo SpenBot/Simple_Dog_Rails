@@ -2,15 +2,29 @@
 
 <p> Make a new appointment with a daycare. </p>
 
-<%= form_for @appointment do |f| %>
+<%= form_for [@appointment] do |f| %>
 
-  <h3> DOG: </h3>
 
-  <%= f.label :"Dog ID #" %>
+  <!-- <p> DOG: </p>
+  <select>
+    <%# @dogs.each do |dog| %>
+      <option value="<%#= @appointment.dog.id. %>"><%#= dog.name %></option>
+    <%# end %>
+  </select>
+  </br>
+  </br>
+  <p> DAYCARE: </p>
+  <select>
+    <%# @daycares.each do |daycare| %>
+      <option value="<%#= daycare.id %>"><%#= daycare.name %></option>
+    <%# end %>
+  </select> -->
+
+  <%= f.label :"Dog" %>
   <%= f.number_field :dog_id %>
   </br>
   </br>
-  <%= f.label :"Daycare ID #" %>
+  <%= f.label :"Daycare" %>
   <%= f.number_field :daycare_id %>
   </br>
   </br>
@@ -33,15 +47,3 @@
   <%= f.submit %>
 
 <% end %>
-
-
-
-
-
-
-<%#= select_tag(:daycare_id, options_for_select([
-  ['daycare 1', 1],
-  ['daycare 2', 2],
-  ['daycare 3', 3]
-])
-) %>

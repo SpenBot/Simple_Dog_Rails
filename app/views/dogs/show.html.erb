@@ -5,7 +5,7 @@
 
 
   <div class="dog_profile_pic">
-    <img src="<%= @dog.photo_url %>" height="400", width="400">
+    <img src="<%= @dog.photo_url %>" height="300", width="300">
   </div>
 
   <div class="dog_profile_info">
@@ -30,9 +30,11 @@
     </p>
   </div>
 
-  <div id="edit_dog_link">
-    <%= link_to " [ EDIT / DELETE DOG PROFILE ] ", edit_dog_path %>
-  </div>
+  <% if current_user == @dog.user %>
+    <div id="edit_dog_link">
+      <%= link_to " [ EDIT / DELETE DOG PROFILE ] ", edit_dog_path %>
+    </div>
+  <% end %>
 
 </div>
 

@@ -19,10 +19,12 @@
 
 
 <h4> APPOINTMENTS : </h4>
+<%# if current_user == @daycare.user %>
+  <div id="new_appointment_link">
+    <%= link_to "[ MAKE A NEW APPOINTMENT ] ", new_appointment_path %>
+  </div>
+<%# end %>
 
-<div id="new_appointment_link">
-  <%= link_to "[ MAKE A NEW APPOINTMENT ] ", new_appointment_path %>
-</div>
 
 <% @daycare.appointments.each do |appointment| %>
   <div class="listed_appointments">
@@ -32,9 +34,11 @@
     <p> YEAR: <%= appointment.year %></p>
     <p> HOUR: <%= appointment.hour %></p>
 
-    <div id="edit_appointment_link">
-      <%= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_appointment_path(appointment) %>
-    </div>
+
+  <div id="edit_appointment_link">
+    <%= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_appointment_path(appointment) %>
+  </div>
+
 
   </div>
 <% end %>
