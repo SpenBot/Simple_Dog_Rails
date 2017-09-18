@@ -15,7 +15,7 @@ class AppointmentsController < ApplicationController
 
   def edit
     @dog = Dog.find(params[:dog_id])
-    @appointment = @dog.appointments.find(params[:id])
+    @appointment = @dog.appointments.find(params[:id])    
     # @appointment = Appointment.find(params[:id])
   end
 

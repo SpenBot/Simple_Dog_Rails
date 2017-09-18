@@ -2,6 +2,7 @@
 
 <% @dogs.each do |dog| %>
   <p> <%= link_to "#{dog.name}", dog %> </p>
+  <img src="<%= dog.photo_url %>" height="200", width="200">
 <% end %>
 
 <div id="new_dog_link">

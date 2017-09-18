@@ -27,13 +27,22 @@ nav a {
   border-radius: 10px;
 }
 
-h2 {
+/*This is the old banner thats brown.*/
+/*h2 {
   text-align: center;
   padding: 25px;
   color: white;
   font-size: 30px;
   text-decoration: underline;
   background-color: rgb(201, 188, 147);
+}*/
+
+h2 {
+  text-align: center;
+  padding: 25px;
+  color: white;
+  font-size: 30px;
+  text-decoration: underline;
 }
 
 footer {
@@ -72,6 +81,20 @@ h4 {
   margin-top: 80px;
 }
 
+.dog_profile {
+  padding: 0 50px;
+  color: white;
+  margin: 30px auto;
+  width: 800px;
+  background-color: rgb(122, 213, 255);
+}
+
+
+
+
+
+
+
 #new_dog_link {
   background-color: rgb(255, 201, 46);
   width: 200px;
@@ -88,7 +111,7 @@ h4 {
 }
 
 #edit_dog_link {
-  background-color: rgb(122, 213, 255);
+  background-color: rgb(247, 117, 107);
   width: 350px;
   padding: 10px;
   margin: 25px 0;

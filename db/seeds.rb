@@ -7,36 +7,41 @@ Appointment.destroy_all
 
 ################# DOG SEEDS #################################
 
-dog_1 = Dog.create({
+user_001 = User.create(email: 'andy@poopmail.com', password: 'pw1234')
+user_002 = User.create(email: 'walter@poopmail.com', password: 'pw2345')
+user_003 = User.create(email: 'pam@poopmail.com', password: 'pw3456')
+
+
+dog_1 = user_001.dogs.create({
   name: "Rody",
-  photo_url: "no photo",
+  photo_url: "/dog_pic_1.jpg",
   owner: "Spenser Holstein",
   breed: "Chihuahua-Lab Mix",
   weight: 25,
   medical_check: true
   })
 
-dog_2 = Dog.create({
+dog_2 = user_002.dogs.create({
   name: "Charlie",
-  photo_url: "no photo",
+  photo_url: "/dog_pic_2.jpg",
   owner: "Bob Burgers",
   breed: "Greyhound",
   weight: 110,
   medical_check: true
   })
 
-dog_3 = Dog.create({
+dog_3 = user_003.dogs.create({
   name: "Maggie",
-  photo_url: "no photo",
+  photo_url: "dog_pic_3.jpg",
   owner: "Lisa Simpson",
   breed: "Pitbull",
   weight: 87,
   medical_check: true
   })
 
-dog_4 = Dog.create({
+dog_4 = user_003.dogs.create({
   name: "Poochy",
-  photo_url: "no photo",
+  photo_url: "dog_pic_4.jpg",
   owner: "Carl Bumpkin",
   breed: "German Shepherd",
   weight: 54,

@@ -1,32 +1,41 @@
-<h2> DOG PROFILE : </h2>
 
-<p>
-  NAME: <%= @dog.name %>
-</p>
+<div class="dog_profile">
 
-<p>
-  PHOTO: <%= @dog.photo_url %>
-</p>
+  <h2> DOG PROFILE : </h2>
 
-<p>
-  OWNER: <%= @dog.owner %>
-</p>
 
-<p>
-  BREED: <%= @dog.breed %>
-</p>
+  <div class="dog_profile_pic">
+    <img src="<%= @dog.photo_url %>" height="400", width="400">
+  </div>
 
-<p>
-  WEIGHT: <%= @dog.weight %>
-</p>
+  <div class="dog_profile_info">
+    <p>
+      NAME: <%= @dog.name %>
+    </p>
 
-<p>
-  MEDICAL CHECK: <%= @dog.medical_check %>
-</p>
+    <p>
+      OWNER: <%= @dog.owner %>
+    </p>
 
-<div id="edit_dog_link">
-  <%= link_to " [ EDIT / DELETE DOG PROFILE ] ", edit_dog_path(@dog) %>
+    <p>
+      BREED: <%= @dog.breed %>
+    </p>
+
+    <p>
+      WEIGHT: <%= @dog.weight %>
+    </p>
+
+    <p>
+      MEDICAL CHECK: <%= @dog.medical_check %>
+    </p>
+  </div>
+
+  <div id="edit_dog_link">
+    <%= link_to " [ EDIT / DELETE DOG PROFILE ] ", edit_dog_path(@dog) %>
+  </div>
+
 </div>
+
 
 <h4> APPOINTMENTS : </h4>
 
@@ -34,17 +43,17 @@
   <%= link_to "[ MAKE A NEW APPOINTMENT ] ", new_dog_appointment_path(@dog) %>
 </div>
 
-  <% @dog.appointments.each do |appointment| %>
-    <div class="dog_appointment">
-    <p> LOCATION: <%= appointment.daycare.name %></p>
-    <p> DAY: <%= appointment.day %></p>
-    <p> MONTH: <%= appointment.month %></p>
-    <p> YEAR: <%= appointment.year %></p>
-    <p> HOUR: <%= appointment.hour %></p>
+<% @dog.appointments.each do |appointment| %>
+  <div class="dog_appointment">
+  <p> LOCATION: <%= appointment.daycare.name %></p>
+  <p> DAY: <%= appointment.day %></p>
+  <p> MONTH: <%= appointment.month %></p>
+  <p> YEAR: <%= appointment.year %></p>
+  <p> HOUR: <%= appointment.hour %></p>
 
-    <div id="edit_dog_appointment_link">
-      <%= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_dog_appointment_path(@dog, appointment) %>
-    </div>
+  <div id="edit_dog_appointment_link">
+    <%= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_dog_appointment_path(@dog, appointment) %>
+  </div>
 
-    </div>
-  <% end %>
+  </div>
+<% end %>

@@ -27,8 +27,8 @@
     <p> HOUR: <%= appointment.hour %></p>
     </div>
 
-    <!-- <div id="edit_dog_appointment_link"> -->
-      <%#= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_dog_appointment_path(appointment.dog, appointment) %>
-    <!-- </div> -->
+    <div id="edit_dog_appointment_link">
+      <%= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_dog_appointment_path(appointment.dog, appointment) %>
+    </div>
 
   <% end %>
