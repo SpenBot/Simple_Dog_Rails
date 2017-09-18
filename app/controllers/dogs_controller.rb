@@ -12,38 +12,44 @@ class DogsController < ApplicationController
 
 
   def new
+
     @dog = Dog.new
 
-    if @dog.user != current_user
+    if !current_user
       flash[:alert] = "Only the dog owners can create dog profiles."
-      redirect_to dog_path(@post)
+      redirect_to dogs_path
     end
 
   end
 
 
   def create
-    unless current_user
+
+    if !current_user
       flash[:alert] = "Only the dog owners can create dog profiles."
+      redirect_to dogs_path
     else
       @dog = Dog.create!(dog_params.merge(user: current_user))
+      redirect_to dog_path(@dog)
     end
-  redirect_to dog_path(@dog)
+
   end
 
 
   def edit
+
     @dog = Dog.find(params[:id])
 
     if @dog.user != current_user
       flash[:alert] = "Only the dog owner can edit dog profiles."
-      redirect_to dog_path(@post)
+      redirect_to dogs_path
     end
 
   end
 
 
   def update
+
     @dog = Dog.find(params[:id])
 
     if @dog.user == current_user
@@ -53,6 +59,7 @@ class DogsController < ApplicationController
     end
 
     redirect_to dog_path(@dog)
+
   end
 
 
@@ -64,6 +71,7 @@ class DogsController < ApplicationController
     else
       flash[:alert] = "Only the dog owner can delete dog profiles."
     end
+    
     redirect_to dogs_path
 
   end

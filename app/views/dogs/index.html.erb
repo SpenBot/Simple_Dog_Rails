@@ -5,6 +5,8 @@
   <img src="<%= dog.photo_url %>" height="200", width="200">
 <% end %>
 
-<div id="new_dog_link">
-  <%= link_to "ADD A NEW DOG", new_dog_path %>
-</div>
+<% if current_user %>
+  <div id="new_dog_link">
+    <%= link_to "ADD A NEW DOG", new_dog_path %>
+  </div>
+<% end %>
