@@ -4,6 +4,8 @@
   <p> <%= link_to "#{daycare.name}", daycare %> </p>
 <% end %>
 
-<div id="new_daycare_link">
-  <%= link_to "ADD A NEW DAYCARE", new_daycare_path %>
-</div>
+<% if current_user %>
+  <div id="new_daycare_link">
+    <%= link_to "ADD A NEW DAYCARE", new_daycare_path %>
+  </div>
+<% end %>

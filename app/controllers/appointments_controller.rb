@@ -9,6 +9,9 @@ class AppointmentsController < ApplicationController
   def new
     @dogs = Dog.all
     @daycares = Daycare.all
+    ##########################
+    @user = current_user
+    ##########################
     @appointment = Appointment.new
     # THIS IS NESTED STUFF
     # @dog = Dog.find(params[:dog_id])

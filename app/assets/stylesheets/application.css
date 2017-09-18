@@ -72,9 +72,25 @@ h4 {
   color: white;
   font-size: 30px;
   text-decoration: underline;
+  background-color: transparent;
 }
 
+.daycare_profile {
+  padding: 30px 50px;
+  color: white;
+  margin: 30px auto;
+  width: 800px;
+  background-color: rgb(122, 213, 255);
+}
 
+.daycare_profile h2 {
+  text-align: center;
+  padding: 25px;
+  color: white;
+  font-size: 30px;
+  text-decoration: underline;
+  background-color: transparent;
+}
 
 
 

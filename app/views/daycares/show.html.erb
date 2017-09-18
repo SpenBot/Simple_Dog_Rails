@@ -1,44 +1,63 @@
-<h2> DAYCARE PROFILE </h2>
+<div class="daycare_profile">
 
-<p>
-  NAME: <%= @daycare.name %>
-</p>
+  <h2> DAYCARE PROFILE : </h2>
 
-<p>
-  ADDRESS: <%= @daycare.address %>
-</p>
+  <!-- <div class="dog_profile_pic">
+    <img src="<%#= @dog.photo_url %>" height="300", width="300">
+  </div> -->
 
-<p>
-  PRICE: <%= @daycare.price %>
-</p>
 
-<div id="edit_daycare_link">
-  <%= link_to " [ EDIT / DELETE DAYCARE PROFILE ] ", edit_daycare_path(@daycare) %>
+    <p>
+      NAME: <%= @daycare.name %>
+    </p>
+
+    <p>
+      ADDRESS: <%= @daycare.address %>
+    </p>
+
+    <p>
+      PRICE: <%= @daycare.price %>
+    </p>
+
+
+
+    <% if current_user == @daycare.user %>
+      <div id="edit_daycare_link">
+        <%= link_to " [ EDIT / DELETE DAYCARE PROFILE ] ", edit_daycare_path(@daycare) %>
+      </div>
+    <% end %>
+
 </div>
 
 
 
-<h4> APPOINTMENTS : </h4>
-<%# if current_user == @daycare.user %>
-  <div id="new_appointment_link">
-    <%= link_to "[ MAKE A NEW APPOINTMENT ] ", new_appointment_path %>
-  </div>
-<%# end %>
 
 
-<% @daycare.appointments.each do |appointment| %>
-  <div class="listed_appointments">
-    <p> DOG: <%= appointment.dog.name %></p>
-    <p> DAY: <%= appointment.day %></p>
-    <p> MONTH: <%= appointment.month %></p>
-    <p> YEAR: <%= appointment.year %></p>
-    <p> HOUR: <%= appointment.hour %></p>
+<% if current_user == @daycare.user %>
+
+  <h4> APPOINTMENTS : </h4>
+  <%# if current_user == @daycare.user %>
+    <div id="new_appointment_link">
+      <%= link_to "[ MAKE A NEW APPOINTMENT ] ", new_appointment_path %>
+    </div>
+  <%# end %>
 
 
-  <div id="edit_appointment_link">
-    <%= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_appointment_path(appointment) %>
-  </div>
+  <% @daycare.appointments.each do |appointment| %>
+    <div class="listed_appointments">
+      <p> DOG: <%= appointment.dog.name %></p>
+      <p> DAY: <%= appointment.day %></p>
+      <p> MONTH: <%= appointment.month %></p>
+      <p> YEAR: <%= appointment.year %></p>
+      <p> HOUR: <%= appointment.hour %></p>
 
 
-  </div>
+    <div id="edit_appointment_link">
+      <%= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_appointment_path(appointment) %>
+    </div>
+
+
+    </div>
+  <% end %>
+
 <% end %>

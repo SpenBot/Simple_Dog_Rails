@@ -16,7 +16,7 @@ class DogsController < ApplicationController
     @dog = Dog.new
 
     if !current_user
-      flash[:alert] = "Only the dog owners can create dog profiles."
+      flash[:alert] = "You must have an account to create dog profiles."
       redirect_to dogs_path
     end
 
@@ -26,7 +26,7 @@ class DogsController < ApplicationController
   def create
 
     if !current_user
-      flash[:alert] = "Only the dog owners can create dog profiles."
+      flash[:alert] = "You must have an account to create dog profiles."
       redirect_to dogs_path
     else
       @dog = Dog.create!(dog_params.merge(user: current_user))
@@ -71,7 +71,7 @@ class DogsController < ApplicationController
     else
       flash[:alert] = "Only the dog owner can delete dog profiles."
     end
-    
+
     redirect_to dogs_path
 
   end
