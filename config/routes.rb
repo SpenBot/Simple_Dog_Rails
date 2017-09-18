@@ -3,10 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'dogs#index'
 
-  resources :dogs do
-    resources :appointments
-  end
-  
+  resources :dogs
+  resources :appointments
   resources :daycares
 
 

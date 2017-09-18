@@ -1,47 +1,69 @@
 class AppointmentsController < ApplicationController
 
-  def new
-    @dog = Dog.find(params[:dog_id])
-    @appointment = @dog.appointments.new
-    # @appointment = Appointment.new
+
+  def show
+    @appointment = Appointment.find(params[:id])
   end
+
+
+  def new
+    @appointment = Appointment.new
+
+    # THIS IS NESTED STUFF
+    # @dog = Dog.find(params[:dog_id])
+    # @appointment = @dog.appointments.new
+  end
+
 
   def create
-    @dog = Dog.find(params[:dog_id])
-    @appointment = @dog.appointments.create!(appointment_params)
+    @appointment = Appointment.create!(appointment_params)
 
-    redirect_to dog_path(@dog)
+    redirect_to appointment_path(@appointment)
+
+    # THIS IS NESTED STUFF
+    # @dog = Dog.find(params[:dog_id])
+    # @appointment = @dog.appointments.create!(appointment_params)
   end
+
 
   def edit
-    @dog = Dog.find(params[:dog_id])
-    @appointment = @dog.appointments.find(params[:id])    
-    # @appointment = Appointment.find(params[:id])
+    @appointment = Appointment.find(params[:id])
+
+    # THIS IS NESTED STUFF
+    # @dog = Dog.find(params[:dog_id])
+    # @appointment = @dog.appointments.find(params[:id])
   end
+
 
   def update
-    @dog = Dog.find(params[:dog_id])
-    @appointment = @dog.appointments.find(params[:id])
-    # @appointment = Appointment.find(params[:id])
-
+    @appointment = Appointment.find(params[:id])
     @appointment.update(appointment_params)
 
-    redirect_to dog_path(@dog)
+    redirect_to appointment_path(@appointment)
+    # redirect_to dog_path(@appointment.dog)
+
+    # THIS IS NESTED STUFF
+    # @dog = Dog.find(params[:dog_id])
+    # @appointment = @dog.appointments.find(params[:id])
   end
+
 
   def destroy
-    @dog = Dog.find(params[:dog_id])
-    @appointment = @dog.appointments.find(params[:id])
-    # @appointment = Appointment.find(params[:id])
-
+    @appointment = Appointment.find(params[:id])
     @appointment.destroy
 
-    redirect_to dog_path(@dog)
+    redirect_to dog_path(@appointment.dog)
+
+    # THIS IS NESTED STUFF
+    # @dog = Dog.find(params[:dog_id])
+    # @appointment = @dog.appointments.find(params[:id])
   end
+
 
   private
   def appointment_params
     params.require(:appointment).permit(:dog_id, :daycare_id, :day, :month, :year, :hour)
   end
+
 
 end

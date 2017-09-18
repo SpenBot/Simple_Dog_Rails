@@ -2,10 +2,10 @@
 
 <p> Edit your dogs appointment information. </p>
 
-<%= form_for [@dog, @appointment] do |f| %>
+<%= form_for @appointment do |f| %>
 
   <h3> DOG: </h3>
-    <p> <%= @dog.name %> </p>
+    <p> <%= @appointment.dog.name %> </p>
   <h3> DAYCARE: </h3>
     <p> <%= @appointment.daycare.name %> </p>
   </br>
@@ -30,6 +30,6 @@
 
 <% end %>
 
-<div id="delete_dog_appointment_link">
-  <%= link_to "DELETE APPOINTMENT", dog_appointment_path(@dog, @appointment), method: :delete %>
+<div id="delete_appointment_link">
+  <%= link_to "DELETE APPOINTMENT", appointment_path, method: :delete %>
 </div>

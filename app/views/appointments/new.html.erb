@@ -2,11 +2,14 @@
 
 <p> Make a new appointment with a daycare. </p>
 
-<%= form_for [@dog, @appointment] do |f| %>
+<%= form_for @appointment do |f| %>
 
   <h3> DOG: </h3>
-    <p> <%= @dog.name %> </p>
 
+  <%= f.label :"Dog ID #" %>
+  <%= f.number_field :dog_id %>
+  </br>
+  </br>
   <%= f.label :"Daycare ID #" %>
   <%= f.number_field :daycare_id %>
   </br>

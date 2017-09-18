@@ -31,7 +31,7 @@
   </div>
 
   <div id="edit_dog_link">
-    <%= link_to " [ EDIT / DELETE DOG PROFILE ] ", edit_dog_path(@dog) %>
+    <%= link_to " [ EDIT / DELETE DOG PROFILE ] ", edit_dog_path %>
   </div>
 
 </div>
@@ -39,20 +39,21 @@
 
 <h4> APPOINTMENTS : </h4>
 
-<div id="dog_new_appointment_link">
-  <%= link_to "[ MAKE A NEW APPOINTMENT ] ", new_dog_appointment_path(@dog) %>
+<div id="new_appointment_link">
+  <%= link_to "[ MAKE A NEW APPOINTMENT ] ", new_appointment_path %>
 </div>
 
 <% @dog.appointments.each do |appointment| %>
-  <div class="dog_appointment">
+  <div class="listed_appointments">
   <p> LOCATION: <%= appointment.daycare.name %></p>
   <p> DAY: <%= appointment.day %></p>
   <p> MONTH: <%= appointment.month %></p>
   <p> YEAR: <%= appointment.year %></p>
   <p> HOUR: <%= appointment.hour %></p>
 
-  <div id="edit_dog_appointment_link">
-    <%= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_dog_appointment_path(@dog, appointment) %>
+  <div id="edit_appointment_link">
+    <%= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_appointment_path(appointment) %>
+    <!-- <a href="/appointments/<%#= appointment.id %>/edit"> [ EDIT / DELETE APPOINTMENT ] </a> -->
   </div>
 
   </div>

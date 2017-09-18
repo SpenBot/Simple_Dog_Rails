@@ -27,22 +27,13 @@ nav a {
   border-radius: 10px;
 }
 
-/*This is the old banner thats brown.*/
-/*h2 {
-  text-align: center;
-  padding: 25px;
-  color: white;
-  font-size: 30px;
-  text-decoration: underline;
-  background-color: rgb(201, 188, 147);
-}*/
-
 h2 {
   text-align: center;
   padding: 25px;
   color: white;
   font-size: 30px;
   text-decoration: underline;
+  background-color: rgb(201, 188, 147);
 }
 
 footer {
@@ -53,23 +44,9 @@ footer {
   margin-top: 60px;
 }
 
-.dog_appointment {
-  background-color: rgb(122, 213, 255);
-  /*border: 5px solid rgb(255, 201, 46);*/
-  margin-top: 25px;
-  font-weight: bold;
-  color: white;
-  padding: 20px;
-}
 
-.daycare_appointment {
-  background-color: rgb(122, 213, 255);
-  /*border: 5px solid rgb(255, 201, 46);*/
-  margin-top: 25px;
-  font-weight: bold;
-  color: white;
-  padding: 20px;
-}
+
+
 
 h4 {
   font-size: 26px;
@@ -89,6 +66,13 @@ h4 {
   background-color: rgb(122, 213, 255);
 }
 
+.dog_profile h2 {
+  text-align: center;
+  padding: 25px;
+  color: white;
+  font-size: 30px;
+  text-decoration: underline;
+}
 
 
 
@@ -125,19 +109,13 @@ h4 {
   color: white;
 }
 
-#dog_new_appointment_link {
+#new_appointment_link {
   background-color: rgb(247, 117, 107);
   width: 400px;
   padding: 10px;
   margin: 10px auto;
   border-radius: 3px;
   text-align: center;
-}
-
-#dog_new_appointment_link a {
-  font-weight: bold;
-  font-size: 22px;
-  color: white;
 }
 
 #delete_dog_link {
@@ -154,6 +132,11 @@ h4 {
   font-size: 18px;
   color: white;
 }
+
+
+
+
+
 
 
 
@@ -213,8 +196,13 @@ h4 {
 
 
 
+#new_appointment_link a {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+}
 
-#edit_dog_appointment_link {
+#edit_appointment_link {
   background-color: rgb(255, 201, 46);
   width: 350px;
   padding: 10px;
@@ -223,13 +211,13 @@ h4 {
   text-align: center;
 }
 
-#edit_dog_appointment_link a {
+#edit_appointment_link a {
   font-weight: bold;
   font-size: 22px;
   color: white;
 }
 
-#delete_dog_appointment_link {
+#delete_appointment_link {
   background-color: rgb(247, 117, 107);
   width: 250px;
   padding: 5px;
@@ -238,11 +226,54 @@ h4 {
   text-align: center;
 }
 
-#delete_dog_appointment_link a {
+#delete_appointment_link a {
   font-weight: bold;
   font-size: 18px;
   color: white;
 }
+
+.show_appointment {
+  background-color: rgb(122, 213, 255);
+  margin-top: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+}
+
+.listed_appointments {
+  background-color: rgb(122, 213, 255);
+  margin-top: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+}
+
+/*.dog_appointment {
+  background-color: rgb(122, 213, 255);*/
+  /*border: 5px solid rgb(255, 201, 46);*/
+  /*margin-top: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+}*/
+
+/*.daycare_appointment {
+  background-color: rgb(122, 213, 255);
+  margin-top: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+}*/
+
+
+
+
+
+
+
+
+
+
 
 
 
