@@ -5,29 +5,14 @@
 <%= form_for [@appointment] do |f| %>
 
 
-  <!-- <p> DOG: </p>
-  <select>
-    <%# @dogs.each do |dog| %>
-      <option value="<%#= @appointment.dog.id. %>"><%#= dog.name %></option>
-    <%# end %>
-  </select>
-  </br>
-  </br>
-  <p> DAYCARE: </p>
-  <select>
-    <%# @daycares.each do |daycare| %>
-      <option value="<%#= daycare.id %>"><%#= daycare.name %></option>
-    <%# end %>
-  </select> -->
+  <p> DOG: </p>
+  <%= f.select :dog_id, Dog.all.map { |dog| [dog.name, dog.id] } %>
 
-  <%= f.label :"Dog" %>
-  <%= f.number_field :dog_id %>
+  <p> DAYCARE: </p>
+  <%= f.select :daycare_id, Daycare.all.map { |daycare| [daycare.name, daycare.id] } %>
   </br>
   </br>
-  <%= f.label :"Daycare" %>
-  <%= f.number_field :daycare_id %>
-  </br>
-  </br>
+
   <%= f.label :"Day" %>
   <%= f.text_field :day %>
   </br>
@@ -44,6 +29,26 @@
   <%= f.text_field :hour %>
   </br>
   </br>
+
+
   <%= f.submit %>
 
 <% end %>
+
+
+<!-- <div class="">
+
+<select>
+  <% @dogs.each do |dog| %>
+    <option value="<%= dog.id %>"><%= dog.name %></option>
+  <% end %>
+</select>
+</br>
+</br>
+<p> DAYCARE: </p>
+<select>
+  <% @daycares.each do |daycare| %>
+    <option value="<%= daycare.id %>"><%= daycare.name %></option>
+  <% end %>
+</select>
+</div> -->

@@ -2,7 +2,9 @@
 
   <div class="show_appointment">
     <p> DOG: <%= @appointment.dog.name %></p>
+    <p> DOG USER: <%= @appointment.dog.user.email %> </p>
     <p> LOCATION: <%= @appointment.daycare.name %> </p>
+    <p> DAYCARE USER: <%= @appointment.daycare.user.email %> </p>
     <p> DAY: <%= @appointment.day %></p>
     <p> MONTH: <%= @appointment.month %></p>
     <p> YEAR: <%= @appointment.year %></p>

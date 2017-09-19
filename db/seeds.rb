@@ -7,13 +7,13 @@ Appointment.destroy_all
 
 ################# DOG SEEDS #################################
 
-user_001 = User.create(email: 'andy@poopmail.com', password: 'pw1234')
-user_002 = User.create(email: 'walter@poopmail.com', password: 'pw2345')
-user_003 = User.create(email: 'pam@poopmail.com', password: 'pw3456')
+user_001 = User.create(email: 'andy@poopmail.com', password: 'dog123')
+user_002 = User.create(email: 'walter@poopmail.com', password: 'dog123')
+user_003 = User.create(email: 'pam@poopmail.com', password: 'dog123')
 
-user_004 = User.create(email: 'mindy@poopmail.com', password: 'pw4567')
-user_005 = User.create(email: 'brian@poopmail.com', password: 'pw4567')
-user_006 = User.create(email: 'george@poopmail.com', password: 'pw4567')
+user_004 = User.create(email: 'mindy@poopmail.com', password: 'day123')
+user_005 = User.create(email: 'brian@poopmail.com', password: 'day123')
+user_006 = User.create(email: 'george@poopmail.com', password: 'day123')
 
 
 dog_1 = user_001.dogs.create({
@@ -36,7 +36,7 @@ dog_2 = user_002.dogs.create({
 
 dog_3 = user_003.dogs.create({
   name: "Maggie",
-  photo_url: "dog_pic_3.jpg",
+  photo_url: "/dog_pic_3.jpg",
   owner: "Lisa Simpson",
   breed: "Pitbull",
   weight: 87,
@@ -45,7 +45,7 @@ dog_3 = user_003.dogs.create({
 
 dog_4 = user_003.dogs.create({
   name: "Poochy",
-  photo_url: "dog_pic_4.jpg",
+  photo_url: "/dog_pic_4.jpg",
   owner: "Carl Bumpkin",
   breed: "German Shepherd",
   weight: 54,
@@ -82,35 +82,74 @@ daycare_4 = user_006.daycares.create({
 
 ################# APPOINTMENT SEEDS ##########################
 
-# appt_1 = user_001.appointments.create({
-#   dog_id: 1,
-#   daycare_id: 3,
-#   day: 15,
-#   month: 9,
-#   year: 2017,
-#   hour: 7
-#   })
-#
-#
-# appt_2 = user_001.appointments.create({
-#   dog_id: 1,
-#   daycare_id: 3,
-#   day: 18,
-#   month: 9,
-#   year: 2017,
-#   hour: 13
-#   })
-#
-#
-# appt_2 = user_001.appointments.create({
-#   dog_id: 1,
-#   daycare_id: 4,
-#   day: 21,
-#   month: 9,
-#   year: 2017,
-#   hour: 7
-#   })
+dog_1.appointments.create({
+   created_by: dog_1.user.email,
+   daycare_id: 1,
+   day: 15,
+   month: 9,
+   hour: 7
+})
 
+dog_1.appointments.create({
+   created_by: dog_1.user.email,
+   daycare_id: 1,
+   day: 235,
+   month: 345,
+   hour: 7
+})
+
+dog_1.appointments.create({
+   created_by: dog_1.user.email,
+   daycare_id: 2,
+   day: 678,
+   month: 88,
+   hour: 666
+})
+
+dog_1.appointments.create({
+   created_by: dog_1.user.email,
+   daycare_id: 3,
+   day: 34234,
+   month: 44,
+   hour: 78
+})
+
+dog_2.appointments.create({
+   created_by: dog_2.user.email,
+   daycare_id: 3,
+   day: 3645,
+   month: 1,
+   hour: 5
+})
+
+dog_2.appointments.create({
+   created_by: dog_2.user.email,
+   daycare_id: 4,
+   day: 78,
+   month: 6,
+   hour: 3
+})
+
+dog_3.appointments.create({
+   created_by: dog_3.user.email,
+   daycare_id: 4,
+   day: 386,
+   month: 2,
+   hour: 3
+})
+
+dog_4.appointments.create({
+   created_by: dog_4.user.email,
+   daycare_id: 2,
+   day: 4,
+   month: 4,
+   hour: 4
+})
+
+
+
+
+#
 # appt_1 = Appointment.create({
 #   dog_id: 1,
 #   daycare_id: 3,

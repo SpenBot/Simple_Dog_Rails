@@ -5,6 +5,8 @@ class CreateAppointments < ActiveRecord::Migration[5.1]
       t.references :dog
       t.references :daycare
 
+      t.string :created_by
+
       t.integer :day
       t.integer :month
       t.integer :year

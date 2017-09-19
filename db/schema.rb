@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170918190346) do
   create_table "appointments", force: :cascade do |t|
     t.bigint "dog_id"
     t.bigint "daycare_id"
+    t.string "created_by"
     t.integer "day"
     t.integer "month"
     t.integer "year"
