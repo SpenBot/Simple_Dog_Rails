@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 
+
+
   <head>
 
     <title>SimpleDog</title>
+
     <%= csrf_meta_tags %>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -17,27 +20,42 @@
 
 
 
+
+
+
   <body>
+
 
 
     <header>
 
-      <h1>SIMPLE DOG</h1>
-      <p>Dog Daycare Reservations App</p>
 
-      <nav>
-        <a href="/dogs">DOGS</a>
-        <a href="/daycares">DAYCARES</a>
-      </nav>
+      <div class="full_site_logo">
+
+        <div class="dog_logo">
+          <img src="/logo_1.png">
+        </div>
+
+        <div class="site_header_text">
+          <h1>SIMPLE DOG</h1>
+          <p>Dog Daycare Reservations App</p>
+        </div>
+
+      </div>
+
+
 
       <div class="sign_in">
         <% if !current_user %>
-          <%= link_to "Sign up", new_user_registration_path %>
-          <%= link_to "Sign in", new_user_session_path %>
+          <%= link_to "LOG IN", new_user_session_path %>
+          <%= link_to "SIGN UP", new_user_registration_path %>
         <% else %>
-          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+          <div class="user_confirmation">
             <%= current_user.email %>
+          </div>
+          <%= link_to "SIGN OUT", destroy_user_session_path, :method => :delete %>
         <% end %>
+
       </div>
 
 
@@ -45,14 +63,38 @@
 
 
 
+
+
+
+
+    <nav>
+      <a href="/homes">HOME</a>
+      <a href="/dogs">DOGS</a>
+      <a href="/daycares">DAYCARES</a>
+    </nav>
+
+
+
+
+
+
     <main>
 
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <div class="flash_alert">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
 
       <%= yield %>
 
     </main>
+
+
+
+
+
+
+
 
 
 

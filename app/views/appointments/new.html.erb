@@ -4,9 +4,8 @@
 
 <%= form_for [@appointment] do |f| %>
 
-
   <p> DOG: </p>
-  <%= f.select :dog_id, Dog.all.map { |dog| [dog.name, dog.id] } %>
+  <%= f.select :dog_id, current_user.dogs.all.map { |dog| [dog.name, dog.id] } %>
 
   <p> DAYCARE: </p>
   <%= f.select :daycare_id, Daycare.all.map { |daycare| [daycare.name, daycare.id] } %>

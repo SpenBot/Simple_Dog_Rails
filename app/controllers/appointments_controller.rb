@@ -24,6 +24,12 @@ class AppointmentsController < ApplicationController
 
   def new
 
+
+
+
+
+
+
     if !current_user
       flash[:alert] = "You must have an account to create new appointments."
       redirect_to dogs_path
@@ -42,6 +48,8 @@ class AppointmentsController < ApplicationController
     # @appointment = Appointment.create!(appointment_params)
     #
     # redirect_to appointment_path(@appointment)
+
+    @  
 
     @appointment = Appointment.new(appointment_params)
 

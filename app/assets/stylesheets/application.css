@@ -1,22 +1,99 @@
+
 body {
   font-family: 'Poppins', sans-serif;
+  /*margin: 0 auto;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
-  background-color: rgb(122, 213, 255);
+  /*background-color: rgb(122, 213, 255);*/
+  background-color: rgb(111, 169, 232);
   color: white;
   padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*margin-bottom: 5px;*/
 }
 
 header h1 {
+  margin-top: 10px;
   margin-bottom: -20px;
+}
+
+.full_site_logo {
+  margin-top: -5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 360px;
+  /*background-color: black;*/
+}
+
+.dog_logo {
+  width: 100px;
+  height: 100px;
+  /*background-color: yellow;*/
+}
+
+.site_header_text {
+  width: 600px;
+  height: 100px;
+  /*background-color: yellow;*/
+  padding-left: 5px;
+}
+
+.sign_in {
+  font-size: 16px;
+  font-weight: bold;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  margin-right: 10px;
+  padding-top: 10px;
+}
+
+.user_confirmation {
+  /*background-color: rgb(255, 201, 46);*/
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 7px 25px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  border: solid 2px white;
+}
+
+.sign_in a{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  /*color: rgb(67, 101, 201);*/
+  font-family: 'Poppins', sans-serif;
+  padding: 3px 35px;
+  /*background-color: rgb(67, 101, 201);*/
+  background-color: transparent;
+  /*background-color: rgb(255, 201, 46);*/
+  /*background-color: rgb(185, 185, 185);*/
+  /*background-color: rgb(250, 209, 9);*/
+  border: solid 2px white;
+  border-radius: 15px;
+  margin: 3px 0;
+  /*box-shadow: 3px 3px 5px rgb(29, 44, 87);*/
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
-  text-align: left;
-  width: 250px;
+  /*justify-content: space-between;*/
+  /*text-align: left;*/
+  /*width: 850px;*/
+  margin: 0 auto 30px;
 }
 
 nav a {
@@ -24,27 +101,229 @@ nav a {
   font-weight: bold;
   background-color: rgb(255, 201, 46);
   padding: 5px 20px;
-  border-radius: 10px;
+  text-align: center;
+  /*border-radius: 10px;*/
+  border-top: solid 2px white;
+  border-left: solid 2px white;
+  /*flex-grow: 1;*/
+  width: 180px;
 }
 
-h2 {
+main {
+  /*min-height: 400px;*/
+
+  /*margin-top: 20px;
+  margin-left: 30px;*/
+  margin: 0 auto;
+  /*margin: 20px;*/
+}
+
+footer {
+  /*background-color: rgb(176, 164, 128);*/
+  /*background-color: rgb(201, 188, 147);*/
+  /*background-color: rgb(224, 210, 164);*/
+  background-color: rgb(111, 169, 232);
+  color: white;
+  padding: 0 50px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+.flash_alert {
+  color: white;
+  background-color: rgb(247, 117, 107);
+  text-align: center;
+  width: 800px;
+  margin: 0 auto;
+}
+
+/*.home_login_section {
+  height: 370px;
+  width: 700px;
+  margin: 20px auto;
+  z-index: -1;
+}*/
+
+/*.home_login_section p {
+  z-index: 1;
+  background-color: rgba(255, 255, 255, .8)
+}*/
+
+
+
+/*.welcome_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(224, 210, 164);*/
+    /*spare colors*/
+    /*background-color: rgb(111, 169, 232);*/
+    /*background-color: rgb(201, 188, 147);*/
+  /*height: 300px;
+  margin: 20px 80px;
+}*/
+
+
+.welcome_section {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+  height: 450px;
+  margin: 20px 80px;
+  background-color: black;
+}
+
+.over {
+  color: rgb(111, 169, 232);
+  font-weight: bold;
+  font-size: 26px;
+  width: 200px;
+  position: absolute;
+  top: 230px;
+  background-color: rgba(255, 255, 255, .7);
+  padding: 0 25px 0 35px;
+  height: 450px;
+  /*margin-top: 40px;*/
+  text-align: center;
+}
+
+
+.home_sec2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 800px;
+  margin: -20px auto 0;
+  height: 340px;
+}
+
+.sign_up_ad {
+  background-color: rgb(111, 169, 232);
+  height: 250px;
+  width: 200px;
+  color: white;
+  margin: 70px auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sign_up_ad img{
+  width: 100px;
+  height: 100px;
+  border: solid 10px white;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.browse_daycare_ad {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  margin: 70px auto 20px;
+  background-color: rgb(255, 201, 46);
+  width: 530px;
+  padding: 25px;
+}
+
+.browse_daycare_ad p {
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  margin-right: 25px;
+
+}
+
+
+/*.over p {
+  width: 150px;
+  background-color: white;
+  font-size: 14px;
+}*/
+
+
+/*.welcome_section p {*/
+    /*color: white;*/
+  /*color: rgb(111, 169, 232);
+  font-weight: bold;
+  font-size: 22px;*/
+    /*padding: 10px 20px 0 20px;*/
+  /*width: 200px;
+
+  position: absolute;
+  top: 200px;
+  background-color: rgba(255, 255, 255, .6);
+  padding: 80px 30px 0 30px;
+  height: 370px;
+}*/
+
+.home_ad {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*h2 {
   text-align: center;
   padding: 25px;
   color: white;
   font-size: 30px;
   text-decoration: underline;
   background-color: rgb(201, 188, 147);
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.login_dog {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(122, 213, 255);
 }
 
-footer {
-  /*background-color: rgb(176, 164, 128);*/
-  background-color: rgb(201, 188, 147);
-  color: white;
-  padding: 5px;
-  margin-top: 60px;
-}
-
-
+.login_daycare {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(122, 213, 255);
+}*/
 
 
 
