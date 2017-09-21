@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 20170918190346) do
     t.bigint "dog_id"
     t.bigint "daycare_id"
     t.string "created_by"
+    t.string "weekday"
+    t.string "month"
     t.integer "day"
-    t.integer "month"
-    t.integer "year"
-    t.integer "hour"
+    t.integer "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["daycare_id"], name: "index_appointments_on_daycare_id"
@@ -32,7 +32,9 @@ ActiveRecord::Schema.define(version: 20170918190346) do
   create_table "daycares", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.string "city"
     t.integer "price"
+    t.string "photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"

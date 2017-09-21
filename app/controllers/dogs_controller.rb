@@ -2,12 +2,27 @@ class DogsController < ApplicationController
 
 
   def index
-    @dogs = Dog.all
+
+    if !current_user
+      flash[:alert] = "You must have an account to view your profile."
+      redirect_to homes_nonuser_dogs_path
+    else
+      @my_dogs = current_user.dogs
+      @dogs = Dog.where.not(id: @my_dogs.each{|my_dog| my_dog.id})
+    end
+
   end
 
 
   def show
-    @dog = Dog.find(params[:id])
+
+    if !current_user
+      flash[:alert] = "You must have an account to view dogs profile."
+      redirect_to homes_nonuser_dogs_path
+    else
+      @dog = Dog.find(params[:id])
+    end
+
   end
 
 

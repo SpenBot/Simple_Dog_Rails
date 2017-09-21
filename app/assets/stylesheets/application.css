@@ -138,7 +138,7 @@ footer {
   background-color: rgb(247, 117, 107);
   text-align: center;
   width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 /*.home_login_section {
@@ -237,7 +237,11 @@ footer {
   font-weight: bold;
   font-size: 28px;
   margin-right: 25px;
-
+  width: 200px;
+  text-align: center;
+  padding-left: 30px;
+  margin-top: 10px;
+  height: 160px;
 }
 
 
@@ -300,6 +304,52 @@ footer {
 
 
 
+.sign_to_dogs {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+  height: 450px;
+  margin: 20px 80px;
+  background-color: black;
+}
+
+.sign_dogs_over {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  width: 250px;
+  position: absolute;
+  top: 230px;
+  background-color: rgba(255, 201, 46, .9);
+  padding: 0 25px 0 35px;
+  height: 450px;
+  /*margin-top: 40px;*/
+  text-align: center;
+}
+
+.sign_dogs_over img{
+  width: 100px;
+  height: 100px;
+  border: solid 10px white;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -327,7 +377,132 @@ footer {
 
 
 
-h4 {
+
+
+.dog_profile {
+  padding: 30px 50px;
+  color: white;
+  margin: 30px auto;
+  width: 800px;
+  border-radius: 20px;
+  background-color: rgb(111, 169, 232);
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dog_profile img {
+  border: solid 20px white;
+  border-radius: 15px;
+}
+
+.dog_profile h2 {
+  text-align: center;
+  /*padding: 15px;*/
+  margin-bottom: 40px;
+  /*color: white;*/
+  color: rgb(111, 169, 232);
+  font-size: 30px;
+  font-weight: bolder;
+  text-decoration: underline;
+  /*background-color: transparent;*/
+  background-color: white;
+  padding: 10px;
+}
+
+.dog_profile_basic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*margin-bottom: 15px;*/
+}
+
+.dog_profile_info {
+  /*background-color: rgb(247, 239, 205);*/
+  background-color: rgb(111, 169, 232);
+  height: 350px;
+  width: 300px;
+  text-align: left;
+  padding: 10px 40px;
+  color: white;
+  border: solid 20px white;
+  border-radius: 15px;
+  line-height: 14px;
+  /*background-color: rgb(176, 164, 128);*/
+  /*background-color: rgb(201, 188, 147);*/
+  /*background-color: rgb(224, 210, 164);*/
+}
+
+/*#edit_dog_link {
+  background-color: rgb(247, 117, 107);
+  width: 350px;
+  padding: 10px;
+  margin: 25px 0;
+  border-radius: 10px;
+  text-align: center;
+}*/
+
+#edit_dog_link  a {
+  background-color: rgb(247, 117, 107);
+  width: 350px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+  margin: 35px 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+
+
+.dog_appointments_section {
+  background-color: rgb(255, 201, 46);
+  background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  padding-bottom: 50px;
+}
+
+/*.show_appointment {
+  background-color: rgb(122, 213, 255);
+  margin-top: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+}*/
+
+.listed_appointments {
+  background-color: rgb(111, 169, 232);
+  margin-top: 35px;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+  width: 500px;
+  border: solid 20px white;
+  border-radius: 15px;
+}
+
+.dog_appointments_section h4 {
+  background-color: white;
+  color: rgb(255, 201, 46);
+  font-size: 30px;
+  font-weight: bolder;
+  /*color: white;*/
+  padding: 10px 280px;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 50px;
+}
+
+
+/*h4 {
   font-size: 26px;
   background-color: rgb(255, 201, 46);
   color: white;
@@ -335,51 +510,151 @@ h4 {
   text-align: center;
   text-decoration: underline;
   margin-top: 80px;
-}
+}*/
 
-.dog_profile {
-  padding: 30px 50px;
-  color: white;
-  margin: 30px auto;
-  width: 800px;
-  background-color: rgb(122, 213, 255);
-}
-
-.dog_profile h2 {
+/*#new_appointment_link {
+  background-color: rgb(247, 117, 107);
+  width: 400px;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 3px;
   text-align: center;
-  padding: 25px;
-  color: white;
-  font-size: 30px;
-  text-decoration: underline;
-  background-color: transparent;
-}
+}*/
 
-.daycare_profile {
-  padding: 30px 50px;
+#new_appointment_link a {
+  background-color: rgb(247, 117, 107);
+  /*background-color: rgb(111, 169, 232);*/
+  font-weight: bold;
+  font-size: 22px;
   color: white;
-  margin: 30px auto;
-  width: 800px;
-  background-color: rgb(122, 213, 255);
-}
-
-.daycare_profile h2 {
+  border-radius: 10px;
+  margin: 10px auto;
+  border-radius: 10px;
   text-align: center;
-  padding: 25px;
+  padding: 15px 20px;
+}
+
+#edit_appointment_link {
+  background-color: rgb(247, 117, 107);
+  width: 350px;
+  padding: 10px;
+  margin: 25px 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#edit_appointment_link a {
+  font-weight: bold;
+  font-size: 22px;
   color: white;
-  font-size: 30px;
-  text-decoration: underline;
-  background-color: transparent;
 }
 
 
 
+
+
+
+
+/*  ############ DOG USER ACCOUNT PAGE ###################### */
+
+.my_dogs_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /*background-color: rgb(255, 201, 46);
+  background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");*/
+  background-color: rgb(111, 169, 232);
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
+  border-radius: 15px;
+  align-items: center;
+  margin: 0 50px;
+}
+
+.my_dogs_section h2 {
+  color: rgb(111, 169, 232);
+  font-size: 30px;
+  background-color: white;
+  padding: 10px 245px;
+  border-radius: 5px;
+}
+
+.my_dogs_gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /*background-color: yellow;*/
+  padding: 30px;
+}
+
+
+.my_dog_thumbnail {
+  /*background-color: rgb(111, 169, 232);*/
+  /*background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");*/
+  background-color: rgb(255, 201, 46);
+  background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
+  /*background-color: white;*/
+  /*border: solid 15px rgb(255, 201, 46);*/
+  border: solid 15px white;
+  border-radius: 15px;
+  width: 300px;
+  height: 220px;
+  margin: 20px;
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dog_thumbnail_left {
+  /*background-color: blue;*/
+  align-items: center;
+  text-align: center;
+}
+
+.dog_thumbnail_right {
+  /*background-color: red;*/
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 10px;
+  line-height: 10px;
+  padding-left: 15px;
+  padding-right: 15px;padding-top: -20px;
+  /*background-color: rgb(247, 117, 107);*/
+  background-color: rgb(111, 169, 232);
+  border-radius: 10px;
+  height: 205px;
+}
+
+.dog_thumbnail_right h6 {
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: underline;
+  text-align: left;
+  border-radius: 3px;
+}
+
+.my_dog_thumbnail a{
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.my_dog_thumbnail img{
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  border: solid 5px white;
+}
 
 #new_dog_link {
-  background-color: rgb(255, 201, 46);
+  /*background-color: rgb(255, 201, 46);*/
+  background-color: rgb(247, 117, 107);
   width: 200px;
   padding: 10px;
   margin: 25px 0;
-  border-radius: 3px;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -389,29 +664,210 @@ h4 {
   color: white;
 }
 
-#edit_dog_link {
-  background-color: rgb(247, 117, 107);
-  width: 350px;
+.my_dogs_network {
+  background-color: rgb(255, 201, 46);
+  background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 50px 50px;
+  align-items: center;
+}
+
+.my_dogs_network h2 {
+  color: rgb(255, 201, 46);
+  font-size: 30px;
+  background-color: white;
   padding: 10px;
-  margin: 25px 0;
-  border-radius: 3px;
+  text-align: center;
+  width: 600px;
+  border-radius: 5px;
+}
+
+.network_dog_gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.network_dog {
+  background-color: white;
+  width: 160px;
+  margin: 25px;
+  border-radius: 25px;
   text-align: center;
 }
 
-#edit_dog_link  a {
+.network_dog img{
+  height: 120px;
+  width: 120px;
+  border-radius: 10px;
+  border: solid 5px white;
+}
+
+
+
+
+
+
+
+
+
+/*  ############ DAYCARE INDEX PAGE ###################### */
+
+.all_daycares_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(111, 169, 232);
+  /*background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");*/
+  border-radius: 15px;
+  align-items: center;
+  margin: 0 50px;
+  width: 1000px;
+  padding-bottom: 50px;
+}
+
+.all_daycares_section h2 {
+  /*color: white;*/
+  color: rgb(255, 201, 46);
+  font-size: 30px;
+  /*background-color: rgb(111, 169, 232);*/
+  /*background-color: rgb(255, 201, 46);*/
+  background-color: white;
+  padding: 10px 245px;
+  border-radius: 5px;
+}
+
+.all_daycares_gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.daycare_thumbnail {
+  padding-top: -10px;
+  height: 240px;
+  width: 280px;
+  margin: 5px;
+  margin-top: 15px;
+  border-radius: 15px;
+  /*background-color: rgb(111, 169, 232);*/
+  background-color: rgb(255, 201, 46);
+  /*background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");*/
+  /*background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");*/
+  text-align: center;
+  border: solid 10px white;
+}
+
+.daycare_thumb_text {
+  color: white;
+  line-height: 10px;
+  text-align: left;
+  padding-left: 25px;
+  font-size: 14px;
+}
+
+.daycare_thumbnail img {
+  border: solid 5px white;
+  border-radius: 5px;
+  height: 100px;
+  width: 140px;
+}
+
+
+.daycare_thumbnail a {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+
+#new_daycare_link {
+  /*background-color: rgb(255, 201, 46);*/
+  background-color: rgb(247, 117, 107);
+  width: 250px;
+  padding: 10px;
+  margin: 40px 0;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#new_daycare_link a {
   font-weight: bold;
   font-size: 22px;
   color: white;
 }
 
-#new_appointment_link {
-  background-color: rgb(247, 117, 107);
-  width: 400px;
-  padding: 10px;
-  margin: 10px auto;
-  border-radius: 3px;
-  text-align: center;
+
+
+
+
+
+
+.daycare_profile {
+  padding: 30px 50px;
+  color: white;
+  margin: 30px auto;
+  width: 800px;
+  background-color: rgb(111, 169, 232);
+  border-radius: 15px;
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
 }
+
+.daycare_profile h2 {
+  text-align: center;
+  /*padding: 25px;*/
+  margin-bottom: 20px;
+  /*color: white;*/
+  color: rgb(111, 169, 232);
+  padding: 10px 80px;
+  font-size: 30px;
+  text-decoration: underline;
+  /*background-color: transparent;*/
+  background-color: white;
+}
+
+.daycare_profile img {
+  align-items: center;
+  border: solid 15px white;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+
+.my_daycares_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-items: center;
+  margin: 40px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #delete_dog_link {
   background-color: rgb(247, 117, 107);
@@ -442,27 +898,14 @@ h4 {
 
 
 
-#new_daycare_link {
-  background-color: rgb(255, 201, 46);
-  width: 250px;
-  padding: 10px;
-  margin: 25px 0;
-  border-radius: 3px;
-  text-align: center;
-}
-
-#new_daycare_link a {
-  font-weight: bold;
-  font-size: 22px;
-  color: white;
-}
 
 #edit_daycare_link {
-  background-color: rgb(122, 213, 255);
+  /*background-color: rgb(122, 213, 255);*/
+  background-color: rgb(247, 117, 107);
   width: 350px;
   padding: 10px;
   margin: 25px 0;
-  border-radius: 3px;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -491,26 +934,9 @@ h4 {
 
 
 
-#new_appointment_link a {
-  font-weight: bold;
-  font-size: 22px;
-  color: white;
-}
 
-#edit_appointment_link {
-  background-color: rgb(255, 201, 46);
-  width: 350px;
-  padding: 10px;
-  margin: 25px 0;
-  border-radius: 3px;
-  text-align: center;
-}
 
-#edit_appointment_link a {
-  font-weight: bold;
-  font-size: 22px;
-  color: white;
-}
+
 
 #delete_appointment_link {
   background-color: rgb(247, 117, 107);
@@ -526,64 +952,3 @@ h4 {
   font-size: 18px;
   color: white;
 }
-
-.show_appointment {
-  background-color: rgb(122, 213, 255);
-  margin-top: 25px;
-  font-weight: bold;
-  color: white;
-  padding: 20px;
-}
-
-.listed_appointments {
-  background-color: rgb(122, 213, 255);
-  margin-top: 25px;
-  font-weight: bold;
-  color: white;
-  padding: 20px;
-}
-
-/*.dog_appointment {
-  background-color: rgb(122, 213, 255);*/
-  /*border: 5px solid rgb(255, 201, 46);*/
-  /*margin-top: 25px;
-  font-weight: bold;
-  color: white;
-  padding: 20px;
-}*/
-
-/*.daycare_appointment {
-  background-color: rgb(122, 213, 255);
-  margin-top: 25px;
-  font-weight: bold;
-  color: white;
-  padding: 20px;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */

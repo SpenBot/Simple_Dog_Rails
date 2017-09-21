@@ -7,10 +7,10 @@ class CreateAppointments < ActiveRecord::Migration[5.1]
 
       t.string :created_by
 
+      t.string :weekday
+      t.string :month
       t.integer :day
-      t.integer :month
-      t.integer :year
-      t.integer :hour
+      t.integer :time
 
       t.timestamps
     end

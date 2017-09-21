@@ -1,12 +1,66 @@
-<h2> ALL DOGS </h2>
 
-<% @dogs.each do |dog| %>
-  <p> <%= link_to "#{dog.name}", dog %> </p>
-  <img src="<%= dog.photo_url %>" height="200", width="200">
-<% end %>
 
-<% if current_user %>
-  <div id="new_dog_link">
-    <%= link_to "ADD A NEW DOG", new_dog_path %>
+
+
+  <div class="my_dogs_section">
+
+    <h2> MY DOGS</h2>
+
+    <div class="my_dogs_gallery">
+
+      <% @my_dogs.each do |dog| %>
+
+        <div class="my_dog_thumbnail">
+
+          <div class="dog_thumbnail_left">
+            <p> <%= link_to "#{dog.name}", dog %> </p>
+            <img src="<%= dog.photo_url %>" height="200", width="200">
+          </div>
+
+          <div class="dog_thumbnail_right">
+            <h6>NEXT APPOINTMENT:</h6>
+              <p>day:</p><%#= dog.appointments.first.day %>
+              <p>month:</p><%#= dog.appointments.first.month %>
+              <p>time:<p>
+          </div>
+
+        </div>
+
+      <% end %>
+
+    </div>
+
+    <% if current_user %>
+      <div id="new_dog_link">
+        <%= link_to "ADD A NEW DOG", new_dog_path %>
+      </div>
+    <% end %>
+
   </div>
-<% end %>
+
+
+
+
+
+
+<div class="my_dogs_network">
+
+  <h2> DOGS IN MY NETWORK </h2>
+
+  <div class="network_dog_gallery">
+
+
+    <% @dogs.each do |dog| %>
+
+        <div class="network_dog">
+          <p> <%= link_to "#{dog.name}", dog %> </p>
+          <img src="<%= dog.photo_url %>" height="200", width="200">
+        </div>
+
+    <% end %>
+
+
+
+  </div>
+
+</div>

@@ -2,7 +2,12 @@ class DaycaresController < ApplicationController
 
 
   def index
-    @daycares = Daycare.all
+    if current_user
+      @my_daycares = current_user.daycares
+      @daycares = Daycare.where.not(id: @my_daycares.each{|my_daycare| my_daycare.id})
+    else
+      @daycares = Daycare.all
+    end
   end
 
 
@@ -81,7 +86,7 @@ class DaycaresController < ApplicationController
   private
 
     def daycare_params
-      params.require(:daycare).permit(:name, :address, :price)
+      params.require(:daycare).permit(:name, :address, :city, :price, :photo_url)
     end
 
 

@@ -49,7 +49,7 @@ class AppointmentsController < ApplicationController
     #
     # redirect_to appointment_path(@appointment)
 
-    @  
+
 
     @appointment = Appointment.new(appointment_params)
 
@@ -154,7 +154,7 @@ class AppointmentsController < ApplicationController
 
   private
   def appointment_params
-    params.require(:appointment).permit(:dog_id, :daycare_id, :day, :month, :year, :hour)
+    params.require(:appointment).permit(:dog_id, :daycare_id, :created_by, :weekday, :month, :day, :time)
   end
 
 

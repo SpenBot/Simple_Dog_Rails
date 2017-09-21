@@ -69,8 +69,18 @@
 
     <nav>
       <a href="/homes">HOME</a>
-      <a href="/dogs">DOGS</a>
-      <a href="/daycares">DAYCARES</a>
+
+      <% if current_user %>
+        <a href="/dogs">MY DOGS</a>
+        <a href="/daycares">DAYCARES</a>
+      <% elsif !current_user %>
+        <a href="/homes/nonuser_dogs">DOGS</a>
+        <a href="/daycares">DAYCARES</a>
+      <% end %>
+
+      <%# elsif current_user && current_user.daycares == true %>
+        <!-- <a href="/daycares/<%#=current_user.daycares.id%>">MY DAYCARE</a> -->
+
     </nav>
 
 

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
 
   get '/homes/' => "homes#index", home:"index"
+  get '/homes/nonuser_dogs' =>"homes#nonuser_dogs", home:"nonuser_dogs"
 
   resources :dogs
   resources :appointments

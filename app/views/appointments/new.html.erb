@@ -11,24 +11,22 @@
   <%= f.select :daycare_id, Daycare.all.map { |daycare| [daycare.name, daycare.id] } %>
   </br>
   </br>
-
-  <%= f.label :"Day" %>
-  <%= f.text_field :day %>
+  <%= f.label :"Weeday" %>
+  <%= f.text_field :weekday %>
   </br>
   </br>
   <%= f.label :"Month" %>
   <%= f.text_field :month %>
   </br>
   </br>
-  <%= f.label :"Year" %>
-  <%= f.text_field :year %>
+  <%= f.label :"Day" %>
+  <%= f.text_field :day %>
   </br>
   </br>
-  <%= f.label :"Hour" %>
-  <%= f.text_field :hour %>
+  <%= f.label :"Time" %>
+  <%= f.text_field :time %>
   </br>
   </br>
-
 
   <%= f.submit %>
 

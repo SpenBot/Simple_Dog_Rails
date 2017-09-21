@@ -5,10 +5,14 @@
     <p> DOG USER: <%= @appointment.dog.user.email %> </p>
     <p> LOCATION: <%= @appointment.daycare.name %> </p>
     <p> DAYCARE USER: <%= @appointment.daycare.user.email %> </p>
-    <p> DAY: <%= @appointment.day %></p>
+    </br>
+    </br>
+    <p> CREATED BY: <%= @appointment.created_by %> </p>
+    </br>
+    </br>
+    <p> DAY: <%= @appointment.weekday%>, <%= @appointment.day %></p>
     <p> MONTH: <%= @appointment.month %></p>
-    <p> YEAR: <%= @appointment.year %></p>
-    <p> HOUR: <%= @appointment.hour %></p>
+    <p> TIME: <%= @appointment.time %>:00</p>
 
     <div id="edit_appointment_link">
       <%= link_to " [ EDIT / DELETE APPOINTMENT ] ", edit_appointment_path(@appointment) %>

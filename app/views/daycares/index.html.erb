@@ -1,11 +1,51 @@
-<h2> ALL DAYCARES </h2>
 
-<% @daycares.each do |daycare| %>
-  <p> <%= link_to "#{daycare.name}", daycare %> </p>
-<% end %>
+
+
 
 <% if current_user %>
-  <div id="new_daycare_link">
-    <%= link_to "ADD A NEW DAYCARE", new_daycare_path %>
+  <div class="my_daycares_section">
+
+        <% @my_daycares.each do |daycare| %>
+
+          <p> <%= link_to "#{daycare.name}", daycare %> </p>
+          <img src="<%= daycare.photo_url %>" height="200", width="200">
+
+        <% end %>
   </div>
 <% end %>
+
+
+<div class="all_daycares_section">
+
+  <h2> DAYCARE CENTERS </h2>
+
+
+  <div class="all_daycares_gallery">
+
+    <% @daycares.each do |daycare| %>
+
+      <div class="daycare_thumbnail">
+        <p> <%= link_to "#{daycare.name}", daycare %> </p>
+        <img src="<%= daycare.photo_url %>" height="100", width="140">
+
+        <div class="daycare_thumb_text">
+          <p>Address: <%= daycare.address %> </p>
+          <p>Price: $<%= daycare.price %></p>
+        </div>
+
+      </div>
+
+    <% end %>
+
+  </div>
+
+
+
+
+  <% if current_user %>
+    <div id="new_daycare_link">
+      <%= link_to "ADD A NEW DAYCARE", new_daycare_path %>
+    </div>
+  <% end %>
+
+</div>
