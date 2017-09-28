@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://simple-dog-rails.herokuapp.com/
 
-Things you may want to cover:
 
-* Ruby version
+DOG USERS:  password = dog123
 
-* System dependencies
+andy@poopmail.com
+bob@poopmail.com
+carl@poopmail.com
+dave@poopmail.com
+ed@poopmail.com
+fred@poopmail.com
+greg@poopmail.com
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+DAYCARE USERS:  password = day123
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+hank@poopmail.com
+ivan@poopmail.com
+john@poopmail.com
+kevin@poopmail.com
+lenny@poopmail.com
+mike@poopmail.com
+nick@poopmail.com
+otto@poopmail.com
+paul@poopmail.com
